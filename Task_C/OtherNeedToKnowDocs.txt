@@ -1,0 +1,8 @@
+Install requirements.txt in working directory , command is 
+'pip install -r requirements.txt'
+For Selenium_Based.py file , run the django project in Task A, navigate to that directory and then 
+run the django command given in that folder (python manage.py runserver) before running 
+Selenium_Based.py file , as I am using it fill form for my own locally created django site .
+'python Selenium_Based.py' to run that file (Install chrome Drivers too if not already present).
+For PyAutoGui_Based.py , just run 'python PyAutoGui_Based.py' command . 
+if any running commands to start a file successful, follow link to see UI

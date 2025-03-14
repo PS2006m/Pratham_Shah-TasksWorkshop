@@ -1,0 +1,5 @@
+My Reason for using Django is that Django Framework allows me to use Frontend languages like 
+HTML,CSS and JS ,
+which allows for a more customized styling while also providing a backend while Streamlit or Gradio 
+does not allow that , and in case of ReactPy , I cannot create multiple webpages whereas Django
+does allow that given you follow a proper flow of urls .

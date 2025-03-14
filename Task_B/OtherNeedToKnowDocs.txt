@@ -1,0 +1,6 @@
+To run this file , simply type 'python ImageClassify.py' in terminal , 
+make sure of the working directory before running command .
+Install the requirements.txt first in working directory,
+command for it is 
+'pip install -r requirements.txt'
+if 'python ImageClassify.py' successful , follow link to see UI

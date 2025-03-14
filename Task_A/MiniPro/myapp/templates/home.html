@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color:lightgray">
+    {% for message in messages %}
+        <div class="alert alert-danger alert-dismissible align-items-center">
+            {{message}}
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>    
+    {% endfor %}
+    <h1 align="center" style="margin-top:10px">Welcome To InfoSaver</h1>
+    <br>
+    <h6 align="center">InfoSaver is about creating , deleting and viewing a database of User Information</h6>
+    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
+        <div style="background-color: cyan; width: 500px; height: 300px; border: 3px solid black; 
+            border-radius: 20px;padding: 20px;">
+            <br>
+            <form action="{% url 'home' %}" method="post" enctype="multipart/form-data" align="center">
+                {% csrf_token %}
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Enter Your Name here ..." required>
+                <p> : To Provide name of the person you wanna save</p>
+                <label>Sports</label>
+                <select name="sport" required>
+                    <option value="none" selected disabled>--Choose A Sport--</option>
+                    <option value="Volleyball">VolleyBaLL</option>
+                    <option value="Football">Football</option>
+                    <option value="Chess">Chess</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Tennis">Tennis</option>
+                    <option value="Hockey">Hockey</option>
+                </select>
+                <p> : To provide preferred sport of person</p>
+                <label>Image File</label>
+                <input type="file" name="file" required>
+                <p> : To provide image of person</p>
+                <button type="submit" class="btn btn-primary">Create User</button>
+            </form>
+        </div>
+        <div style="background-color: cyan; width: 500px; height: 300px; border: 3px solid black; 
+                border-radius: 20px;padding: 20px;">
+            <br>
+            <form action="{% url 'delete' %}" method="post" enctype="multipart/form-data" align="center">
+                {% csrf_token %}
+                <label>Name</label>
+                <input type="text" name="name" id="del" placeholder="Enter Name To Delete ..." required>
+                <br><br>
+                <button type="submit" class="btn btn-primary">Delete User</button>
+            </form>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <h5>Registered Users : </h5>
+        <ul>
+            {% for name,sport in request.session.user_info %}
+                <li>Person name is {{name}} and preferred Sport is {{sport}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

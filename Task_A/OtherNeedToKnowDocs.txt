@@ -1,0 +1,7 @@
+To run a django project , 
+navigate to thhe project name's directory , in this case MiniPro (caution , go to directory 
+with project name , not site name as those two are same , correct one is the one with env1 folder)
+after reaching there , run 'python manage.py runserver' . 
+The models are already migrated seeing the dlb.sqlite3 file , but migrate if database gives any 
+problems or is shows error of not migrated . command is 'python manage.py migrate'
+If successful 'python manage.py runserver' , follow localhost url to visit Site
