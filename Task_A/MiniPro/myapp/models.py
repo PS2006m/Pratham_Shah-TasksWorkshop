@@ -8,4 +8,4 @@ class Info(models.Model):
     file=models.ImageField(upload_to='media/user_files')
     
     def __str__(self):
-        return self.id+"  "+self.name
+        return str(self.id)+"  "+self.name

@@ -33,4 +33,3 @@ def delete(request):
     except Exception as e:
         messages.error(request, f"An error occurred: {e}")
         return redirect('home')
-    return render(request, 'home.html', {'users': users})

@@ -14,6 +14,7 @@ def auto_run(text):
         data=data+i
     pyautogui.moveTo(300, 1020) 
     pyautogui.click()
+    time.sleep(2)
     pyautogui.write("Notepad")
     time.sleep(4)
     pyautogui.press("enter")
