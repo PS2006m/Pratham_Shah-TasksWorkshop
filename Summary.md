@@ -10,3 +10,19 @@ In this tasks , I tried to create a unique UIs for the problem statements given 
    I needed a way to use my database in HTML file as I wanted user to view the new data with the old data , the instance they submit, but i was not rendering ,
     simply redirecting . So I created a session to handle ,  but needed to combine two datas :-names and sports as I wanted to use them in same for loop , used zip to do it ,
    converted zip to list for access in HTML file . And thus , My Mini Site was ready .
+
+2. Approach Towards task B was confusing as to which UI to select , Gradio or Streamlit , I settled on Gradio as it
+    seemed simpler . Challenges I faced was to find proper code to load a model from Hugging Face ,the site did have lots of
+   models om various subjects , but the code given in that site was giving problems when run on my terminal  , As I did not
+   have time for Debugging , i compromised for a resnet18 model feom torchvision . It is about ImageClassification . And
+   My Task_B was complete
+
+3. For Task_C , I again chose gradio as it seemed simple . 2 files here , Selenium based  and PyAutoGui based .
+    for Selenium , I decided to just take and enter data from my own DjangoSite from Task A .
+   Automation was quite simple as i just had to find id for the Delete field . For Pyautogui , it was tough work as I was
+   trying to automate opening a new notepad file , saving the  data entered by user  and saving as file name also entered
+   by user . Had to the use the hotkeys syntax for ctrl+N and ctrl+S functions, which is something I learned new .
+   first was to locate the windows search bar with mouse pointer coordinates , Took some timee . then give enough sleep
+   time in between to avoid text overlapping . It ran properly after a lot of efforts . I beleive, the mouse pointer
+   may not locate windows search bar sameway due to difference in screen sizes ,  you can adjust coordinates on your own
+   or see the 2 proof videos of Pyautogui I have Included . and my Task_C was complete
